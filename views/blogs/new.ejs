@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Log In</title>
+    <link rel='stylesheet' href='stylesheets/style.css' />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="/javascripts/index.js"></script>
+  </head>
+  <body>
+
+    <nav class="grey light-1">
+      <div>
+        <a href="#!" class="brand-logo center">Blogger</a>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="row" id="blogCreationForm">
+        <form class="col s12" action="/blog" method="post">
+          <div class="row">
+            <div class="input-field col s12">
+              <input type="text" name="title" id="blogTitle">
+              <label for="blogTitle">Title</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12">
+              <input type="text" name="body" id="blogBody">
+              <label for="blogBody">Body</label>
+            </div>
+          </div>
+          <button class="btn waves-effect waves-light" type="submit" name="action">Submit</button>
+        </form>
+      </div>
+    </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+  </body>
+</html>
