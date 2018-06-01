@@ -12,6 +12,24 @@ class Blog {
         return blogs
       })
       .catch((error) => console.error({error}))
+
+    // return database.raw(`
+    //   SELECT blogs.*,
+    //   (
+    //     SELECT json_agg(json_build_object('title', title, 'body', body, 'id', id))
+    //     FROM comments
+    //     WHERE comments.blog_id = blogs.id
+    //   ) AS comments
+    //   FROM blogs
+    //   INNER JOIN comments ON blogs.id = comments.blog_id
+    //   WHERE blogs.user_id = ?
+    //   GROUP BY blogs.id
+    //   ORDER BY blogs.created_at
+    // `, userId)
+    // .then((blogs) => {
+    //   return blogs.rows
+    // })
+    // .catch((error) => console.error({error}))
   }
 
   static create(attributes) {
